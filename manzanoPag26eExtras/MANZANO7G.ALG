@@ -14,33 +14,38 @@ var
 inicio
 
       escreva("Digite o valor de A: ")
-   leia(a)
-   escreva("Digite o valor de B: ")
-   leia(b)
-   escreva("Digite o valor de C: ")
-   leia(c)
-   escreva("Digite o valor de D: ")
-   leia(d)
+    leia(a)
 
-   // Aplicando a distributiva: A * (B + C) = A * B + A * C
-   ladoEsquerdo1 <- a * (b + c)
-   ladoDireito1 <- a * b + a * c
+    escreva("Digite o valor de B: ")
+    leia(b)
 
-   escreval("A * (B + C) = ", ladoEsquerdo1)
-   escreval("A * B + A * C = ", ladoDireito1)
+    escreva("Digite o valor de C: ")
+    leia(c)
 
-   // Outra distributiva: D * (A + B) = D * A + D * B
-   ladoEsquerdo2 <- d * (a + b)
-   ladoDireito2 <- d * a + d * b
+    escreva("Digite o valor de D: ")
+    leia(d)
 
-   escreval("D * (A + B) = ", ladoEsquerdo2)
-   escreval("D * A + D * B = ", ladoDireito2)
+    // A + B e A * B usando distributiva
+    escreval("A + B = ", a + b)
+    escreval("A * B = ", a * b, " (usando A * (1 + (B - 1)) = ", a * 1, " + ", a * (b - 1), ")")
 
-   // Verificação visual
-   se (ladoEsquerdo1 = ladoDireito1) e (ladoEsquerdo2 = ladoDireito2) entao
-      escreval("A propriedade distributiva foi confirmada!")
-   senao
-      escreval("Há um erro nos cálculos.")
-   fimse
-      
+    // A + C e A * C
+    escreval("A + C = ", a + c)
+    escreval("A * C = ", a * c, " (usando A * (1 + (C - 1)) = ", a * 1, " + ", a * (c - 1), ")")
+
+    // A + D e A * D
+    escreval("A + D = ", a + d)
+    escreval("A * D = ", a * d, " (usando A * (1 + (D - 1)) = ", a * 1, " + ", a * (d - 1), ")")
+
+    // B + C e B * C
+    escreval("B + C = ", b + c)
+    escreval("B * C = ", b * c, " (usando B * (1 + (C - 1)) = ", b * 1, " + ", b * (c - 1), ")")
+
+    // B + D e B * D
+    escreval("B + D = ", b + d)
+    escreval("B * D = ", b * d, " (usando B * (1 + (D - 1)) = ", b * 1, " + ", b * (d - 1), ")")
+
+    // C + D e C * D
+    escreval("C + D = ", c + d)
+    escreval("C * D = ", c * d, " (usando C * (1 + (D - 1)) = ", c * 1, " + ", c * (d - 1), ")")
 fimalgoritmo
