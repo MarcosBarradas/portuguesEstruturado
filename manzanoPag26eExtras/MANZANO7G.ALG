@@ -1,39 +1,46 @@
 Algoritmo "manzano7g"
-// Disciplina   : [Lógica de Programação com javascript]
+// Disciplina   : [LÃ³gica de ProgramaÃ§Ã£o com javascript]
 // Professor   : Jailson
 
-// Descrição   : Algoritmo lê quatro números inteiros e apresentar o resultado
-// da adição e multiplicação, baseando-se na
-//utilização do conceito da propriedade distributiva.
+// DescriÃ§Ã£o   : Algoritmo lÃª quatro nÃºmeros inteiros e apresentar o resultado
+// da adiÃ§Ã£o e multiplicaÃ§Ã£o, baseando-se na
+//utilizaÃ§Ã£o do conceito da propriedade distributiva.
 
 // Autor(a)    : Marcos
 // Data atual  : 29/03/2025
 var
    a, b, c, d: inteiro
+   ladoEsquerdo1, ladoDireito1, ladoEsquerdo2, ladoDireito2: inteiro
 inicio
 
       escreva("Digite o valor de A: ")
-      leia(a)
-      escreva("Digite o valor de B: ")
-      leia(b)
-      escreva("Digite o valor de C: ")
-      leia(c)
-      escreva("Digite o valor de D: ")
-      leia(d)
+   leia(a)
+   escreva("Digite o valor de B: ")
+   leia(b)
+   escreva("Digite o valor de C: ")
+   leia(c)
+   escreva("Digite o valor de D: ")
+   leia(d)
 
-      escreval("A + B = ", a + b)
-      escreval("A * B = ", a * b)
-      escreval("A + C = ", a + c)
-      escreval("A * C = ", a * c)
-      escreval("A + D = ", a + d)
-      escreval("A * D = ", a * d)
+   // Aplicando a distributiva: A * (B + C) = A * B + A * C
+   ladoEsquerdo1 <- a * (b + c)
+   ladoDireito1 <- a * b + a * c
 
-      escreval("B + C = ", b + c)
-      escreval("B * C = ", b * c)
-      escreval("B + D = ", b + d)
-      escreval("B * D = ", b * d)
+   escreval("A * (B + C) = ", ladoEsquerdo1)
+   escreval("A * B + A * C = ", ladoDireito1)
 
-      escreval("C + D = ", c + d)
-      escreval("C * D = ", c * d)
+   // Outra distributiva: D * (A + B) = D * A + D * B
+   ladoEsquerdo2 <- d * (a + b)
+   ladoDireito2 <- d * a + d * b
+
+   escreval("D * (A + B) = ", ladoEsquerdo2)
+   escreval("D * A + D * B = ", ladoDireito2)
+
+   // VerificaÃ§Ã£o visual
+   se (ladoEsquerdo1 = ladoDireito1) e (ladoEsquerdo2 = ladoDireito2) entao
+      escreval("A propriedade distributiva foi confirmada!")
+   senao
+      escreval("HÃ¡ um erro nos cÃ¡lculos.")
+   fimse
       
 fimalgoritmo
